@@ -12,4 +12,5 @@ time_test_baseline
 time_test_openmp_2
 time_test_openmp_4
 time_test_leibniz
+time_test_euler
 result_clock_gettime.csv
