@@ -124,6 +124,18 @@ double compute_pi_leibniz(size_t N)
 {
     double pi = 0.0;
     for(int i=0; i<N; i++)
-        pi += pow(-1,i) / (2*i+1);
+    {
+        int numerator = (i % 2 == 0 ? 1 : -1);
+        pi += numerator / (double)(2*i+1);
+    }
     return pi * 4.0;
+}
+
+double compute_pi_euler(size_t N)
+{
+    double pi = 0.0;
+    for(int i=0; i<N; i++)
+        pi += (double)(1 / pow(i, 2));
+    pi *= 6;
+    return sqrt(pi);
 }
