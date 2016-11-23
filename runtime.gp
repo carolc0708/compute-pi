@@ -14,5 +14,9 @@ plot [64:35000][0:] 'result_clock_gettime.csv' using 1:2 smooth csplines lw 2 ti
 '' using 1:5 smooth csplines lw 2 title 'avx', \
 '' using 1:6 smooth csplines lw 2 title 'avxunroll', \
 '' using 1:7 smooth csplines lw 2 title 'leibniz', \
-'' using 1:8 smooth csplines lw 2 title 'euler'
+'' using 1:8 smooth csplines lw 2 title 'leibniz_openmp_2', \
+'' using 1:9 smooth csplines lw 2 title 'leibniz_openmp_4', \
+'' using 1:10 smooth csplines lw 2 title 'leibniz_avx', \
+'' using 1:11 smooth csplines lw 2 title 'leibniz_avx_unroll', \
+'' using 1:12 smooth csplines lw 2 title 'euler'
 

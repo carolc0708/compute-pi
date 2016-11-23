@@ -30,6 +30,22 @@ int main(int argc, char const *argv[])
     pi = compute_pi_leibniz(N);
 #endif
 
+#if defined(LEIBNIZ_OPENMP_2)
+    pi = compute_pi_leibniz_openmp(N,2);
+#endif
+
+#if defined(LEIBNIZ_OPENMP_4)
+    pi = compute_pi_leibniz_openmp(N,4);
+#endif
+
+#if defined(LEIBNIZ_AVX)
+    pi = compute_pi_leibniz_avx(N);
+#endif
+
+#if defined(LEIBNIZ_AVX_UNROLL)
+    pi = compute_pi_leibniz_avx_unroll(N);
+#endif
+
 #if defined(EULER)
     pi = compute_pi_euler(N);
 #endif
