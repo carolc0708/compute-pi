@@ -5,6 +5,7 @@
 *.list
 *.swp
 *.bak
+*.png
 benchmark_clock_gettime
 benchmark_clock_gettime_leibniz
 time_test_avx
