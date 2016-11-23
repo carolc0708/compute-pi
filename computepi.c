@@ -228,11 +228,17 @@ double compute_pi_leibniz_avx_unroll(size_t N)
 }
 
 /*euler*/
-long double compute_pi_euler(size_t N)
+double compute_pi_euler(size_t n)
 {
-    long double pi = 0.0;
-    for(int i=0; i<N; i++)
-        pi += (1 / pow(i, 2.0));
-    pi *= 6.0;
-    return sqrtl(pi);
+    double tmp, ntmp;
+    double pi = 0.0;
+    double i = n;
+    pi  = i / (2 * i + 1);
+    for(i= n - 1; i > 1 ;){
+            tmp = pi;
+            i--;
+            ntmp = i / (2 * i + 1);
+            pi = (2 + tmp)*ntmp;
+    }
+    return pi +2;
 }

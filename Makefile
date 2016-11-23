@@ -40,6 +40,7 @@ check: default
 	time ./time_test_leibniz_openmp_4
 	time ./time_test_leibniz_avx
 	time ./time_test_leibniz_avx_unroll
+	time ./time_test_euler
 
 gencsv: default
 	for i in `seq 100 5000 25000`; do \
